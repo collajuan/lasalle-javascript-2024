@@ -119,9 +119,16 @@ li {
 
 /* SECTION EMAIL */
 
-#email{
+#mail{
     margin-top: 100px;
-    background-color: blueviolet;
-    background-image: url("./img/map-image.png");
+    background-color: rgb(135, 28, 236);
+    background-image: url(../img/map-image.png);
+    height: 600px;
 
+    text-align: center;
+    color: white;
+}
+
+#mail form label{
+    
 }
