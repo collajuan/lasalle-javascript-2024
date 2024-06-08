@@ -1,0 +1,127 @@
+body {
+    width: 1024px;
+}
+
+/* HEADER */
+header {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    color: white;
+    size: 0.5rem;
+}
+
+header img {
+    float: inline-start;
+}
+/* NAV principal */
+header nav {
+    background-color: blueviolet;
+}
+
+ul {
+    list-style: none;
+}
+
+
+li {
+    display: inline-block;
+    margin: 2px;
+    padding: 10px;
+    color: white;
+}
+
+/* BODY */
+/* Section Who we are */
+#who-we-are {    
+    background-color: rgb(247, 243, 243);
+    text-align: center;
+}
+
+#who-we-are article {
+    text-align: justify;    
+}
+
+#who-we-are article img {
+    float: left;
+}
+/* HAY QUE QUITAR EL FLEX**************** */
+.row{
+    display: flex;
+}
+
+.row .column {
+    flex: 50%;
+}
+#who-we-are article {
+    margin: 5px;
+}
+
+/* SECTION OUR SERVICES */
+#services{
+    /* display: flex;     */
+    text-align: center;
+}
+
+
+#services h2{
+    /* aqui quizas poner todos los h2 en center     */
+    text-align: center;
+}
+
+#services article{
+    width: 30%;
+    display: inline-block;
+    text-align: justify;
+    margin: 5px;
+}
+
+#services article i{
+    color: blueviolet;
+    border: solid rgb(180, 179, 179) 4px;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 15px 15px 0px 0px;
+    font-size: 1.5rem;
+    float: left;
+}
+
+/* SECTION PORTFOLIO */
+#portfolio{
+    background-color: rgb(247, 243, 243);
+    text-align: center;
+    padding: 20px 50px 60px;
+}
+
+#portfolio img{
+    width: 250px;
+    height: 150px;
+}
+/* animaciones de iamgenes */
+
+
+/* SECTION CONTACT */
+
+#contact h2,h3{
+    text-align: center;
+}
+
+#contact iframe {
+    border-radius: 50%;
+    float: left;
+    margin-left: 300px;
+    margin-right: 10px;
+}
+
+/* SECTION EMAIL */
+
+#email{
+    margin-top: 100px;
+    background-color: blueviolet;
+    background-image: url("./img/map-image.png");
+
+}
