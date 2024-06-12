@@ -4,6 +4,7 @@ body {
 }
 
 /* HEADER */
+/* **************************** */
 header {
     position: relative;
 }
@@ -39,6 +40,7 @@ li a {
     color: white;
     text-decoration: none;
     padding: 10px;    
+    transition-duration: 0.5s;
 }
 
 li a:hover{
@@ -49,6 +51,8 @@ li a:hover{
 
 /* BODY */
 /* Section Who we are */
+/* **************************** */
+
 #who-we-are {    
     background-color: rgb(247, 243, 243);
     text-align: center;
@@ -75,6 +79,8 @@ li a:hover{
 
 
 /* SECTION OUR SERVICES */
+/* **************************** */
+
 #services{
     /* display: flex;     */
     text-align: center;
@@ -101,6 +107,7 @@ li a:hover{
     margin: 15px 5px 0px 0px;
     font-size: 1.5rem;
     float: left;
+    transition-duration: 1s;
     /* display: inline-block; */
     /* width: 15%; */
 }
@@ -119,6 +126,8 @@ li a:hover{
 
 
 /* SECTION PORTFOLIO */
+/* **************************** */
+
 #portfolio{
     background-color: rgb(247, 243, 243);
     text-align: center;
@@ -128,12 +137,20 @@ li a:hover{
 #portfolio img{
     width: 250px;
     height: 150px;
+    transition-duration: 1s;
 }
 /* animaciones de iamgenes */
-
+#portfolio img:hover {
+    transform: rotate(-20deg);
+}
+/* solo la imagen del medio */
+#portfolio #img-5:hover {
+    transform: rotate(180deg);
+    border-radius: 40%;
+}
 
 /* SECTION CONTACT */
-
+/* **************************** */
 #contact h2, #contact h3{
     text-align: center;
 }
@@ -145,8 +162,8 @@ li a:hover{
     margin-right: 10px;
 }
 
-/* SECTION EMAIL - Formulario*/
-
+/**** SECTION EMAIL - Formulario ****/
+/* **************************** */
 #mail{
     margin-top: 100px;
     background-color: rgb(135, 28, 236);
@@ -188,7 +205,8 @@ li a:hover{
     margin-left: 90px;
 }
 
-/* FOOTER */
+/**** FOOTER ****/
+/* **************************** */
 footer {
     background-color: blueviolet;
 }
