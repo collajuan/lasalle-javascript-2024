@@ -162,17 +162,30 @@ li a:hover{
 
 #mail form{
     position: relative;
-    left: 30%;
+    left: 35%;
 }
 
 #mail label {
-    width: 500px;
+    display: inline-block;
+    width: 80px;
     text-align:start;    
 }
 
 #mail form input{  
-    width: 100px;
+    width: 200px;
     margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#mail form textarea{  
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#mail form #submit{
+    width: 100px;
+    margin-left: 90px;
 }
 
 /* FOOTER */
