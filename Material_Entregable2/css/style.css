@@ -137,7 +137,7 @@ li a:hover{
 #portfolio img{
     width: 250px;
     height: 150px;
-    transition-duration: 1s;
+    transition-duration: 1s;    
 }
 /* animaciones de iamgenes */
 #portfolio img:hover {
@@ -184,8 +184,8 @@ li a:hover{
 
 #mail label {
     display: inline-block;
-    width: 80px;
-    text-align:start;    
+    width: 8%;
+    /* text-align:start;     */
 }
 
 #mail form input{  
