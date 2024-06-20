@@ -16,35 +16,23 @@ h1 {
     color: white;
 }
 
-header img {
-    float: inline-start;
-}
+
 /* NAV principal */
 header nav {
     background-color: blueviolet;
-    border: 1px solid black;
+    /* border: 1px solid black;  */
+    
 }
 
-ul {
-    list-style: none;
+.navbar-toggler {
+    border: none;
+}
+.nav-link a {
+    /* color: blueviolet; */    
 }
 
 
-li {
-    display: inline-block;
-    margin: 2px;
-    padding: 10px;
-    color: white;
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;    
-    transition-duration: 0.5s;
-}
-
-li a:hover{
+.nav-item a:hover{
     color: blueviolet;
     background-color: white;
     border-radius: 5px;
