@@ -15,6 +15,7 @@
         <img src="./img/header.jpg" height="250px" width="100%" alt="">
         <h1>My Bussines Webpage</h1>
         <!-- Bootstrap navbar -->
+        <!-- https://dev.to/thejourneyville/bootstrap-51-navbar-and-hamburger-toggler-4m9h -->
         <!-- ************************ -->
         <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container">
@@ -35,11 +36,11 @@
         </nav>
     </header>
     <section id="who-we-are" class="container">
+        <h2>Who we are?</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, expedita.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         <div class="row">
-            <h2>Who we are?</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, expedita.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <article class="col-12 col-sm-6 col-md-4">
+            <article class="col-md-6">
                 <h3>Lorem, ipsum.</h3>
                 <img src="./img/1.jpg" alt="fuegos artificiales" />
                 <p>
@@ -55,30 +56,29 @@
                 </p>
             </article>
             <!-- <hr> -->
-            <article class="col-12 col-sm-6 col-md-4">
-                <aside class="col-12 col-sm-6 col-md-4">
+            <div class="col-md-6">
+                <article>
+                    <h3>Lorem, ipsum.</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui expedita
+                        dolores nesciunt recusandae porro voluptates culpa quas labore
+                        suscipit deleniti odit, temporibus nostrum officiis molestias debitis
+                        consequatur ipsam repudiandae autem.
+                    </p>
+                </article>
+                <aside>
                     <img src="./img/ad.png" width="200px" height="50px" alt="">
                 </aside>
-                <h3>Lorem, ipsum.</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui expedita
-                    dolores nesciunt recusandae porro voluptates culpa quas labore
-                    suscipit deleniti odit, temporibus nostrum officiis molestias debitis
-                    consequatur ipsam repudiandae autem.
-                </p>
-
-            </article>
-
-            <!-- <p>Buy Cheap Beer <a href="#">here</a></p> -->
-            <article class="col-12 col-sm-6 col-md-4">
-                <h3>Lorem, ipsum.</h3>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui expedita
-                    dolores nesciunt recusandae porro voluptates culpa quas labore
-                    suscipit deleniti odit, temporibus nostrum officiis molestias debitis
-                    consequatur ipsam repudiandae autem.
-                </p>
-            </article>
+                <article>
+                    <h3>Lorem, ipsum.</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui expedita
+                        dolores nesciunt recusandae porro voluptates culpa quas labore
+                        suscipit deleniti odit, temporibus nostrum officiis molestias debitis
+                        consequatur ipsam repudiandae autem.
+                    </p>
+                </article>
+            </div>
         </div>
     </section>
     <hr />
@@ -197,51 +197,32 @@
             </article>
         </div>
     </section>
-    <section id="mail">
+    <section id="mail" class="d-flex flex-column align-items-center">
         <h2>Email US</h2>
-        <form>
+        <form action="/route" method="post" class="">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name">
+                <label for="exampleInputEmail1" class="form-label">Name*</label>
+                <input type="text" class="form-control" id="name" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="exampleInputEmail1" class="form-label">Email*</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com"
+                    aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="phone">
+                <input type="text" class="form-control" id="phone" required>
             </div>
             <div class="mb-3">
-                <label for="sunject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <label for="subject" class="form-label">Subject*</label>
+                <input type="text" class="form-control" id="subject">
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message*</label>
+                <textarea class="form-control" name="message" id="message" rows="4"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Send" id="submit" />
         </form>
-
-
-
-
-        <!-- <form action="/route" method="post">
-            <label for="name">Nombre*:</label>
-            <input type="text" id="name" required /><br />
-
-            <label for="email">Email*:</label>
-            <input type="text" id="email" required /><br />
-
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" required /><br />
-
-            <label for="subject">Subject*:</label>
-            <input type="text" id="subject" required /><br />
-
-            <label for="message">Message*</label>
-            <textarea name="message" id="message" rows="4"></textarea><br />
-
-            <input type="submit" value="Send" id="submit" />
-        </form> -->
     </section>
     <footer>
         <p>

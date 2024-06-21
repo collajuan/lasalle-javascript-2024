@@ -154,14 +154,26 @@ header nav {
     margin-top: 100px;
     background-color: rgb(135, 28, 236);
     background-image: url(../img/map-image.png);
-    height: 400px;    
+    height: 5%;    
     color: white;
 }
 
 #mail h2{
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
 }
+
+
+#mail form div{  
+    width: 250px;
+    border-radius: 5px;
+}
+
+#mail form #submit{
+    width: 100px;
+    margin-left: 90px;
+}
+
 
 
 
