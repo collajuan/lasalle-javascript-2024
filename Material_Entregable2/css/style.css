@@ -21,7 +21,6 @@ h1 {
 header nav {
     background-color: blueviolet;
     /* border: 1px solid black;  */
-    
 }
 
 .navbar-toggler {
@@ -164,33 +163,7 @@ header nav {
     text-align: center;
 }
 
-#mail form{
-    position: relative;
-    left: 35%;
-}
 
-#mail label {
-    display: inline-block;
-    width: 8%;
-    /* text-align:start;     */
-}
-
-#mail form input{  
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-#mail form textarea{  
-    width: 200px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-
-#mail form #submit{
-    width: 100px;
-    margin-left: 90px;
-}
 
 /**** FOOTER ****/
 /* **************************** */
