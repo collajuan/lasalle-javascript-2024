@@ -58,7 +58,7 @@ header nav {
 
 
 #who-we-are aside{
-    /* float: right; */
+    margin: 10px;
 }
 
 
@@ -100,7 +100,7 @@ header nav {
 }
 
 #services article div {
-    width: 70%;
+    width: 65%;
     display: inline-block;
 }
 
