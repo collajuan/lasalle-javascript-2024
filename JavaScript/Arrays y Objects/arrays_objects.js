@@ -89,13 +89,14 @@ listaPropiedad = animales.map(animal => {
     return animal.especie    
 });
 // TODO: cread una variable que contenga la suma de una propiedad (que sea numérica)
-sumaProp = 0
-animales.forEach(element => {   
-    sumaProp = sumaProp + element.edad
-    // console.log(sumaProp);
-});
+sumaProp = animales.reduce((accumulator, currentValue) => {
+    // console.log(accumulator)
+    // console.log(currentValue.edad);
+    return accumulator + currentValue.edad
+  });
 // TODO: mostrar por consola todo lo anterior
-console.log(listaPropiedad);
+// console.log(listaPropiedad);
 console.log(sumaProp);
 // TODO: mostrar por consola una frase que resuma las propiedades de cada objeto
 // TODO: buscad una manera de mostrar por consola todos los objetos en forma de tabla
+console.table(animales)
