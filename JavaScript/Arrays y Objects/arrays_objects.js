@@ -130,6 +130,8 @@ console.log(animals.push("🐍"));
 console.log(animals);
 
 // shift() y unshift() hacen lo mismo que pop() y push() pero en el principio del array
+console.log("Shift de colors", colors.shift());
+console.log(`${colors.length} Unshift de colors ${colors.unshift("🔴")}`)
 
 // flat() une en un único array el array y sus subarrays
 array = [1, 2, [3, 4, 5], [[6, 7], 8]]
