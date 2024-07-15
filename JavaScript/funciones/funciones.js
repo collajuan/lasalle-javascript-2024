@@ -30,7 +30,7 @@ console.log(dni);
 
 // array de dos elemento devuelve el array invertido
 function arrayInvertido(array) {
-    return array.reverse()
+    return array.toReversed()
 }
 
-console.log(arrayInvertido([1,2]));
+console.log(arrayInvertido([1,2])); 
