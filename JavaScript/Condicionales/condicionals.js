@@ -1,4 +1,3 @@
-
 console.log("%cCondicionals", "font-weight: bold");
 console.log("⚠ Descomenta els prompts per que funcionin els exercicis ⚠");
 
@@ -169,43 +168,28 @@ function calcular() {   // Solución de Myrella
             break;
     }
 }
-
 // TODO: crea una función que divida dos números enteros y te devuelva en un array el resultado y el resto (residuo)
 
 // TODO: crea una función que pida por prompt si quieres camiseta, pantalon o gorra, de qué color y de qué talla (S, M, L, XL) y te muestre por consola un resumen de tu pedido "Has pedido una camiseta 👕 azul 🔵 talla XL"
 
 function pedido() {
-    quiereCamiseta = prompt("¿Quieres camiseta?");
-
-    if (quiereCamiseta == "Si") {
-        tallaCamiseta = prompt("¿De que talla la quieres? (S, M, L, XL)");
+    let articulo = prompt("Indique si queire una camiseta, pantalon o gorra");
+    if (!["camiseta", "pantalon", "gorra"].includes(articulo)) {
+        console.log("Debe ingresar camiseta, pantalon o gorra");
+        pedido()
     }
+    //console.log(typeof articulo);
+    console.log(articulo);
+    let respueta = [articulo]
+    let color = prompt("Indique el color deseado:")
+    //poner condicional de los colores admitidos
+    respueta.push(color)    
+    let talla = prompt("Indique la talla deseada:")
+    //Poner if de las tallas admitidas
+    respueta.push(talla)
+    console.log(respueta);
+    console.log(`Has pedido ${respueta[0]} de color ${respueta[1]} y talla ${respueta[2]}`);
 
-    quierePantalon = prompt("¿Quieres pantalon?");
-
-    if (quierePantalon == "Si") {
-        tallaPantalon = prompt("¿De que talla la quieres? (S, M, L, XL)");
-    }
-
-    quiereGorra = prompt("¿Quieres gorra?");
-
-    if (quiereGorra == "Si") {
-        tallaGorra = prompt("¿De que talla la quieres? (S, M, L, XL)");
-    }
-
-    respuesta = "";
-
-    if (tallaCamiseta != null) {
-        respuesta += `Has pedido una camiseta con la talla ${tallaCamiseta}`;
-    }
-    if (tallaGorra != null) {
-        respuesta += `Has pedido una gorra con la talla ${tallaGorra}`;
-    }
-    if (tallaPantalon != null) {
-        respuesta += `Has pedido un pantalon con la talla ${tallaPantalon}`;
-    }
-
-    console.log(respuesta);
 }
 
 pedido()
