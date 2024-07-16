@@ -174,7 +174,7 @@ function calcular() {   // Solución de Myrella
 
 function pedido() {
     let articulo = prompt("Indique si queire una camiseta, pantalon o gorra");
-    if (!["camiseta", "pantalon", "gorra"].includes(articulo)) {
+    if (!["camiseta", "pantalon", "gorra"].includes(articulo)) {//agregar opcion con acentos, toLowerCase
         console.log("Debe ingresar camiseta, pantalon o gorra");
         pedido()
     }
@@ -189,7 +189,6 @@ function pedido() {
     respueta.push(talla)
     console.log(respueta);
     console.log(`Has pedido ${respueta[0]} de color ${respueta[1]} y talla ${respueta[2]}`);
-
 }
 
 pedido()
