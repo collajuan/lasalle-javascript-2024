@@ -60,19 +60,16 @@ for (let i = 0; i <= 20; i++) {
 //let numero = prompt("Ingrese un numero:")
 let numero = "2589"
 contador = []
-for (let char of numero) { //por cada caracter del string
-    for (let j = 0; j < 100; j++) { //por cada numero del 1 al 100
-        j.toString()
-        for (let num of j.toString()) { //el caracter esta en el numero ?
-            if (num == char && !contador.includes(j)) { // Lo agrego si no esta ya incluido por otro caracter
+for (let char of numero) { //por cada caracter del string del usuario...
+    for (let j = 0; j < 100; j++) { //por cada numero del 1 al 100...
+        for (let num of j.toString()) { //por cada digito del numero del 1 al 100...
+            if (num == char && !contador.includes(j)) { // Verifico si char esta en el numero y lo agrego si no esta ya incluido por otro caracter
                 contador.push(j)
             }
         }
     }
 }
 // console.log(contador);
-
-
 
 
 // TODO: lista de la compra. Haz que un prompt se repita hasta que el usuario introduzca una palabra clave; 
@@ -84,17 +81,19 @@ for (let char of numero) { //por cada caracter del string
 //                       - Mantega
 //                       - Aigua
 
+//inicio variables
 listaCompra = {}
 item = 0;
 articulo = ''
-while (articulo != "Exit") {
+while (articulo != "Exit") { 
     articulo = prompt("Indique Item. Exit para terminar")
     if (articulo == 'Exit') {
         break;
     }
-    listaCompra[`${item}`] = articulo
-    item++;
+    listaCompra[`${item}`] = articulo //agrego otro item al objeto
+    item++; 
 }
+
 console.log('Lista de Compra:');
 for (const key in listaCompra) {
     console.log("- " + listaCompra[key]);
