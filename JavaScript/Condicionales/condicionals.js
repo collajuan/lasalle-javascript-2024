@@ -170,6 +170,21 @@ function calcular() {   // Solución de Myrella
 }
 // TODO: crea una función que divida dos números enteros y te devuelva en un array el resultado y el resto (residuo)
 
+function divide () {
+    let dividendo = parseInt(prompt('Ingrese numero entero a dividir'))
+    let divisor = parseInt(prompt('ingrese divisor entero'))
+    console.log(dividendo,divisor);
+    if(true) {   
+        console.log([parseInt(dividendo/divisor), dividendo%divisor]);     
+        return [dividendo/divisor, dividendo%divisor]
+    } else {
+        console.log('Ingrese numeros validos');
+        divide()
+    }
+}
+
+divide()
+
 // TODO: crea una función que pida por prompt si quieres camiseta, pantalon o gorra, de qué color y de qué talla (S, M, L, XL) y te muestre por consola un resumen de tu pedido "Has pedido una camiseta 👕 azul 🔵 talla XL"
 
 function pedido() {
@@ -182,15 +197,15 @@ function pedido() {
     console.log(articulo);
     let respueta = [articulo]
     let color = prompt("Indique el color deseado:")
-    //poner condicional de los colores admitidos
+    //Poner condicional de los colores admitidos, llamar de nuevo a la funcion
     respueta.push(color)    
     let talla = prompt("Indique la talla deseada:")
-    //Poner if de las tallas admitidas
+    //Poner if de las tallas admitidas, llamar de nuevo a la funcion
     respueta.push(talla)
     console.log(respueta);
     console.log(`Has pedido ${respueta[0]} de color ${respueta[1]} y talla ${respueta[2]}`);
 }
 
-pedido()
+// pedido()
 
 // TODO: crea una función que esté al principio de todo del script y te permita decidir cuál de los cuatro ejercicios anteriores se ejecuta
