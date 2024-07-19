@@ -50,6 +50,12 @@ for (let i = 0; i <= 20; i++) {
     console.log(mensaje);
 }
 
+// TODO: fes un contador que mostri a la consola els números de l'1 al número que introdueixis com a paràmentre (fins a 1000 com a màxim)
+// let increment = prompt("ingrese numero")
+// for(increment ; increment < 1000; increment++){
+//     console.log(increment);
+// }
+
 // TODO: haz un contador que sólo muestre los números que tengan un dígito contenido en la string definida por el usuario (con prompt) hasta 100
 //let numero = prompt("Ingrese un numero:")
 let numero = "2589"
@@ -68,6 +74,7 @@ for (let char of numero) { //por cada caracter del string
 
 
 
+
 // TODO: lista de la compra. Haz que un prompt se repita hasta que el usuario introduzca una palabra clave; 
 //hasta entonces, cada palabra introducida será un item de la lista de la compra, que se escribirá después de 
 //que el usuario lo detenga con el formato:
@@ -76,6 +83,7 @@ for (let char of numero) { //por cada caracter del string
 //                       - Pa
 //                       - Mantega
 //                       - Aigua
+
 listaCompra = {}
 item = 0;
 articulo = ''
