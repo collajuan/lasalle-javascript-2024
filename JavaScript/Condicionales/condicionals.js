@@ -183,7 +183,7 @@ function divide () {
     }
 }
 
-divide()
+// divide()
 
 // TODO: crea una función que pida por prompt si quieres camiseta, pantalon o gorra, de qué color y de qué talla (S, M, L, XL) y te muestre por consola un resumen de tu pedido "Has pedido una camiseta 👕 azul 🔵 talla XL"
 
@@ -191,7 +191,7 @@ function pedido() {
     let articulo = prompt("Indique si queire una camiseta, pantalon o gorra");
     if (!["camiseta", "pantalon", "gorra"].includes(articulo)) {//agregar opcion con acentos, toLowerCase
         console.log("Debe ingresar camiseta, pantalon o gorra");
-        pedido()
+        return pedido()
     }
     //console.log(typeof articulo);
     console.log(articulo);
@@ -209,3 +209,7 @@ function pedido() {
 // pedido()
 
 // TODO: crea una función que esté al principio de todo del script y te permita decidir cuál de los cuatro ejercicios anteriores se ejecuta
+
+function elegirFuncion() {
+    
+}
