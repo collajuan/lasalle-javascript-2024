@@ -2,9 +2,9 @@
 
 function tablaMultiplicar() {
     let tabla = []
-    for (let i = 0; i<=9; i++) {
-        for (let j=0; j<=9; j++) {
-            tabla.push((i+1)*(j+1))
+    for (let i = 0; i <= 9; i++) {
+        for (let j = 0; j <= 9; j++) {
+            tabla.push((i + 1) * (j + 1))
         }
     }
     console.log(tabla);
@@ -15,7 +15,7 @@ function tablaMultiplicar() {
 // TODO: recrea la función parseFloat() de forma que coja los números aunque haya letras antes y acepte como separador decimal los símbolos ",", "." y "'". Pe.
 
 function newParseFloat(string) {
-    let abc = ['a','b','c','d','e','f','g','h','i','j','k','l', 'ñ','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    let abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ñ', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let parse = ''
     for (i = 0; i < string.length; i++) {
         if (!abc.includes(string[i])) {
@@ -30,7 +30,7 @@ function newParseFloat(string) {
 // TODO: crea una función que coja un string y que devuelva una letra aleatoria (sin contar espacios y signos de puntuación)
 
 function letraAleatoria(string) {
-    let abc = ['a','b','c','d','e','f','g','h','i','j','k','l', 'ñ','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    let abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ñ', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let parse = ''
     for (i = 0; i < string.length; i++) {
         if (abc.includes(string[i])) {
@@ -50,17 +50,32 @@ function letraAleatoria(string) {
 
 function cortaPalabra(str) {
     let palabra = ''
-    for (i=0; i > str.length; i++) {
+    for (i = 0; i > str.length; i++) {
         if (str[i] != ' ') palabra += str[i]
-
     }
-
 }
 
 
 
 // TODO: paradoja del cumpleaños. Genera N fechas de cumpleaños aleatorias (1-365) en un array y comprueba si hay alguna repetida. Haz esto por N = 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 y muestra en la consola por cuáles ha habido coincidencias de cumpleaños
 
+function checkCumple(num) {
+    let fechas = []
+    for (let i = 0; i < num; i++) {
+        fechas.push(Math.floor(Math.random() * 365 + 1));
+    }
+    console.log(fechas);
+
+    fechas.forEach((element, index) => {
+        for (j = 0; j < fechas.length; j++) {
+            if (j != index & element == fechas[j]) {
+                console.log(`Hay duplicado: ${element} lugar ${index} con ${j}`);
+            }
+        }
+    })
+}
+
+checkCumple(20)
 
 // TODO: dos funciones que gestionen los datos recibidos en un array de strings o en una string con todas juntas
 // data0 = "NOMBRE Omar"
@@ -103,7 +118,7 @@ const csvStudents = `ID,First Name,Last Name,Age,Grade,Email,Phone,Address
 //                  Model = "E350",
 //                  Description = "ac, abs, moon",
 //                  Price = 3000.00
-//                 },    
+//                 },
 //                { Year = 1997,
 //                  Make = "Ford",
 //                  Model = "E350",
