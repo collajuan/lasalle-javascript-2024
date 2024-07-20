@@ -104,18 +104,39 @@ function listaCompra() {
 
 }
 
-
 function randomNum (a,b) {
     console.log(Math.floor(Math.random() * (b+1 - a) + a));
  }
 
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
-randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+// randomNum(4,10)
+
+//******************** Fechas ********************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
