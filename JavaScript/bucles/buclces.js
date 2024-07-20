@@ -58,18 +58,18 @@ for (let i = 0; i <= 20; i++) {
 
 // TODO: haz un contador que sólo muestre los números que tengan un dígito contenido en la string definida por el usuario (con prompt) hasta 100
 // let numero = prompt("Ingrese un numero:")
-let numero = "2589"
-contador = []
-for (let char of numero) { //por cada caracter del string del usuario...
-    for (let j = 0; j < 100; j++) { //por cada numero del 1 al 100...
-        for (let num of j.toString()) { //por cada digito del numero del 1 al 100...
-            if (num == char && !contador.includes(j)) { // Verifico si char está en el numero y lo agrego a contador si no esta ya incluido por otro caracter
-                contador.push(j)
-            }
-        }
-    }
-}
-console.log(contador);
+// let numero = "2589"
+// contador = []
+// for (let char of numero) { //por cada caracter del string del usuario...
+//     for (let j = 0; j < 100; j++) { //por cada numero del 1 al 100...
+//         for (let num of j.toString()) { //por cada digito del numero del 1 al 100...
+//             if (num == char && !contador.includes(j)) { // Verifico si char está en el numero y lo agrego a contador si no esta ya incluido por otro caracter
+//                 contador.push(j)
+//             }
+//         }
+//     }
+// }
+// console.log(contador);
 
 
 
@@ -84,20 +84,22 @@ console.log(contador);
 //                       - Aigua
 
 //inicio variables
-listaCompra = {}
-item = 0;
-articulo = ''
-while (articulo != "Exit") { 
-     articulo = prompt("Indique Item. Exit para terminar")
-    if (articulo == 'Exit') {
-        break;
+function listaCompra() {
+    let listaCompra = {}
+    let item = 0;
+    let articulo = ''
+    while (articulo != "Exit") {
+        articulo = prompt("Indique Item. Exit para terminar")
+        if (articulo == 'Exit') {
+            break;
+        }
+        listaCompra[`${item}`] = articulo //agrego otro item al objeto
+        item++;
     }
-    listaCompra[`${item}`] = articulo //agrego otro item al objeto
-    item++; 
-}
-console.log(listaCompra);
-console.log('Lista de Compra:');
-for (const key in listaCompra) {
-    console.log("- " + listaCompra[key]);
-}
+    console.log(listaCompra);
+    console.log('Lista de Compra:');
+    for (const key in listaCompra) {
+        console.log("- " + listaCompra[key]);
+    }
 
+}
