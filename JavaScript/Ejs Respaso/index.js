@@ -69,20 +69,18 @@ function checkCumple(num) {
     fechas.forEach((element, index) => {
         for (j = 0; j < fechas.length; j++) {
             if (j != index & element == fechas[j]) {
-                console.log(`Hay duplicado: ${element} lugar ${index} con ${j}`);
+                console.log(`Hay duplicado ${element}: index ${index} con ${j}`);
             }
         }
     })
 }
 
-checkCumple(20)
+//checkCumple(30)
 
 // TODO: dos funciones que gestionen los datos recibidos en un array de strings o en una string con todas juntas
 // data0 = "NOMBRE Omar"
 // data1 = "COG Olmedo" -> [fecha0, fecha1, fecha2, ...]
 // data2 = "AGE 33"
-
-// data = "NOMBRE Omar COG Olmedo AGE 33"
 
 // La función debe devolver un objeto así:
 
@@ -91,6 +89,32 @@ checkCumple(20)
 // apellido: "Olmedo",
 // edad: 33
 // }
+
+//{"NOMBRE Omar", "COG Olmedo", "AGE 33"}
+function dataFromArray(array) {
+    let result = {}
+    array.forEach(data => {
+        const [Key, valor] = data.split(" ")
+        result[Key.toLowerCase()] = valor
+    })
+    return result
+}
+//console.log(dataFromArray(["NOMBRE Omar", "COG Olmedo", "AGE 33"]));
+
+// data = "NOMBRE Omar COG Olmedo AGE 33"
+function dataFromString(str) {
+    const dataArray = str.split(" ")
+    const result = {}    
+    console.log(dataArray);
+    for(i=0; i < dataArray.length; i++){        
+        const [Key, valor] = [dataArray[i], dataArray[i+1]]
+        result[Key.toLowerCase()] = valor
+        i++
+    }    
+    return result
+}
+
+//console.log(dataFromString("NOMBRE Omar COG Olmedo AGE 33")); 
 
 // TODO: gestionar un CSV. El programa debe tomar un string en formato CSV y meter toda la información dentro de un array de objetos con los nombres de las columnas como propiedades
 // PISTA: necesitará ayuda. Pídala
@@ -125,3 +149,20 @@ const csvStudents = `ID,First Name,Last Name,Age,Grade,Email,Phone,Address
 //                  Description = "",
 //                  Price = 3000.00
 //                 } ];
+
+function csvToArray (csv) {
+    const array = csv.split(/\r?\n/)
+    const titulos = array.shift().split(",") //quito la primera linea del csv y la paso a un array con cada titulo como elemento
+    arrayResult = []
+    array.forEach((valor,index) => {
+        //console.log(valor)
+        console.log(index);
+        for(i=0; i<titulos.length; i++){
+            console.log(titulos[i], valor.split(",")[i])
+        }
+    })
+}
+
+csvToArray(csvStudents)
+//csvToArray(csvCotxes)
+
