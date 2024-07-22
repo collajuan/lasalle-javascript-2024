@@ -159,7 +159,7 @@ function csvToArray(csv) {
         //console.log(index);
         arrayResult[index] = {}  //elemento 'index' del array será un objeto
         for (i = 0; i < arrayTitulos.length; i++) {
-            //console.log(titulos[i], valor.split(",")[i])
+            // console.log(arrayTitulos[i], valor.split(",")[i])
             arrayResult[index][arrayTitulos[i].toLowerCase()] = valor.split(",")[i]
         }
     })
