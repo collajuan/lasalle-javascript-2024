@@ -151,16 +151,20 @@ const csvStudents = `ID,First Name,Last Name,Age,Grade,Email,Phone,Address
 //                 } ];
 
 function csvToArray (csv) {
-    const array = csv.split(/\r?\n/)
+    const array = csv.split(/\r?\n/) //cada fila del csv un elemento del array
     const titulos = array.shift().split(",") //quito la primera linea del csv y la paso a un array con cada titulo como elemento
     arrayResult = []
     array.forEach((valor,index) => {
         //console.log(valor)
-        console.log(index);
-        for(i=0; i<titulos.length; i++){
-            console.log(titulos[i], valor.split(",")[i])
+        //console.log(index);
+        arrayResult[index] = {}
+        for(i=0; i < titulos.length; i++){
+            //console.log(titulos[i], valor.split(",")[i])
+            arrayResult[index][titulos[i].toLowerCase()] = valor.split(",")[i]
         }
     })
+    console.log(arrayResult);
+    // console.log(arrayResult[0].address);
 }
 
 csvToArray(csvStudents)
