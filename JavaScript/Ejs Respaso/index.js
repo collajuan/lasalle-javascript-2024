@@ -104,13 +104,13 @@ function dataFromArray(array) {
 // data = "NOMBRE Omar COG Olmedo AGE 33"
 function dataFromString(str) {
     const dataArray = str.split(" ")
-    const result = {}    
+    const result = {}
     console.log(dataArray);
-    for(i=0; i < dataArray.length; i++){        
-        const [Key, valor] = [dataArray[i], dataArray[i+1]]
+    for (i = 0; i < dataArray.length; i++) {
+        const [Key, valor] = [dataArray[i], dataArray[i + 1]]
         result[Key.toLowerCase()] = valor
         i++
-    }    
+    }
     return result
 }
 
@@ -150,17 +150,17 @@ const csvStudents = `ID,First Name,Last Name,Age,Grade,Email,Phone,Address
 //                  Price = 3000.00
 //                 } ];
 
-function csvToArray (csv) {
+function csvToArray(csv) {
     const array = csv.split(/\r?\n/) //cada fila del csv un elemento del array
-    const titulos = array.shift().split(",") //quito la primera linea del csv y la paso a un array con cada titulo como elemento
-    arrayResult = []
-    array.forEach((valor,index) => {
+    const arrayTitulos = array.shift().split(",") //quito la primera linea del csv y la paso a un array con cada titulo como elemento
+    arrayResult = []    //array que tendra los objetos
+    array.forEach((valor, index) => {
         //console.log(valor)
         //console.log(index);
-        arrayResult[index] = {}
-        for(i=0; i < titulos.length; i++){
+        arrayResult[index] = {}  //elemento 'index' del array será un objeto
+        for (i = 0; i < arrayTitulos.length; i++) {
             //console.log(titulos[i], valor.split(",")[i])
-            arrayResult[index][titulos[i].toLowerCase()] = valor.split(",")[i]
+            arrayResult[index][arrayTitulos[i].toLowerCase()] = valor.split(",")[i]
         }
     })
     console.log(arrayResult);
