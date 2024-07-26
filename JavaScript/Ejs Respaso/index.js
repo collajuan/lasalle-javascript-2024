@@ -44,7 +44,7 @@ function letraAleatoria(string) {
 //console.log(letraAleatoria('TTTTTTTjuan  sdlksdfsdf'));
 
 // TODO: crea una función que coja un texto y le separe sus palabras (sin signos de puntuación) y las devuelva en un nuevo string separadas por espacios (sin usar arrays)
-function separateWords(string) {
+function separateWords (string) {
     const ABC = `ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ`;
     let words = '';
     
