@@ -1,18 +1,18 @@
-// TODO: muestra las tablas de multiplicar del 1 al 9 por la consola
+// muestra las tablas de multiplicar del 1 al 9 por la consola
 
 function tablaMultiplicar() {
     let tabla = []
-    for (let i = 0; i <= 9; i++) {
-        for (let j = 0; j <= 9; j++) {
-            tabla.push((i + 1) * (j + 1))
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= 9; j++) {
+            tabla.push((i) * (j))
         }
     }
     console.log(tabla);
 }
-// tablaMultiplicar()
+//tablaMultiplicar()
 
 
-// TODO: recrea la función parseFloat() de forma que coja los números aunque haya letras antes y acepte como separador decimal los símbolos ",", "." y "'". Pe.
+// recrea la función parseFloat() de forma que coja los números aunque haya letras antes y acepte como separador decimal los símbolos ",", "." y "'". Pe.
 
 function newParseFloat(string) {
     let abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ñ', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -21,26 +21,27 @@ function newParseFloat(string) {
         if (!abc.includes(string[i])) {
             parse += string[i]
         }
+        //agregar que solo agrega numeros hasta la primera letra
     }
     console.log(parse);
 }
 
 //newParseFloat('7dsfsdfsdf4.2ldsf')
 
-// TODO: crea una función que coja un string y que devuelva una letra aleatoria (sin contar espacios y signos de puntuación)
+// crea una función que coja un string y que devuelva una letra aleatoria (sin contar espacios y signos de puntuación)
 
 function letraAleatoria(string) {
     let abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ñ', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let parse = ''
     for (i = 0; i < string.length; i++) {
-        if (abc.includes(string[i])) {
+        if (abc.includes(string[i].toLowerCase())) {
             parse += string[i]
         }
     }
-    return parse[Math.floor(Math.random() * parse.length)]
+    return parse[Math.floor(Math.random() * parse.length)].toLowerCase()
 }
 
-//console.log( letraAleatoria('juanasdlksdfsdf'));
+console.log(letraAleatoria('TTTTTTTjuana  sdlksdfsdf'));
 
 // TODO: crea una función que coja un texto y le separe sus palabras (sin signos de puntuación) y las devuelva en un nuevo string separadas por espacios (sin usar arrays)
 
@@ -167,6 +168,7 @@ function csvToArray(csv) {
     // console.log(arrayResult[0].address);
 }
 
-csvToArray(csvStudents)
+//csvToArray(csvStudents)
 //csvToArray(csvCotxes)
 
+2
