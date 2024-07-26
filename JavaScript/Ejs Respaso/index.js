@@ -41,7 +41,7 @@ function letraAleatoria(string) {
     return parse[Math.floor(Math.random() * parse.length)].toLowerCase()
 }
 
-console.log(letraAleatoria('TTTTTTTjuana  sdlksdfsdf'));
+//console.log(letraAleatoria('TTTTTTTjuan  sdlksdfsdf'));
 
 // TODO: crea una función que coja un texto y le separe sus palabras (sin signos de puntuación) y las devuelva en un nuevo string separadas por espacios (sin usar arrays)
 
@@ -49,26 +49,46 @@ console.log(letraAleatoria('TTTTTTTjuana  sdlksdfsdf'));
 
 // TODO: crea una función que coja un string y que devuelva una palabra aleatoria contenida en ella (sin usar arrays)
 
-function cortaPalabra(str) {
-    let palabra = ''
-    for (i = 0; i > str.length; i++) {
-        if (str[i] != ' ') palabra += str[i]
+function randomWord(string) {
+    //string = separateWords(string)
+    let spaces = 0
+    
+    for (const char of string) {
+        if (char == " ") spaces++
     }
+
+    let wordNum = parseInt((spaces + 1) * Math.random())
+    
+    if (wordNum == 0) return string.slice(0, string.indexOf(" "))
+
+    for (let i = 0; i < wordNum; i++) {
+        string = string.slice(string.indexOf(" ") + 1)
+    }
+
+    if (string.indexOf(" ") == -1) return string
+
+    return string.slice(0, string.indexOf(" "))
 }
 
+// console.log(randomWord("hola, Omar. Cómo estas?"));
+// console.log(randomWord("l'Omar és el nostre profe"));
+// console.log(randomWord(`El Carlos dijo: "¡Omar! ¡Cuidado!"`));
+// console.log(randomWord(`   El Carlos    dijo: "¡Omar!    ¡Cuidado!"    `));
 
 
 // TODO: paradoja del cumpleaños. Genera N fechas de cumpleaños aleatorias (1-365) en un array y comprueba si hay alguna repetida. Haz esto por N = 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 y muestra en la consola por cuáles ha habido coincidencias de cumpleaños
 
 function checkCumple(num) {
     let fechas = []
+    //genero array con tantas fecha aleatoreas como num
     for (let i = 0; i < num; i++) {
         fechas.push(Math.floor(Math.random() * 365 + 1));
     }
     console.log(fechas);
-
+    //reviso los duplicados de cada elemento
     fechas.forEach((element, index) => {
         for (j = 0; j < fechas.length; j++) {
+            //console log si hay elemento repetido y no es el mismo
             if (j != index & element == fechas[j]) {
                 console.log(`Hay duplicado ${element}: index ${index} con ${j}`);
             }
