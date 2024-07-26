@@ -44,13 +44,42 @@ function letraAleatoria(string) {
 //console.log(letraAleatoria('TTTTTTTjuan  sdlksdfsdf'));
 
 // TODO: crea una función que coja un texto y le separe sus palabras (sin signos de puntuación) y las devuelva en un nuevo string separadas por espacios (sin usar arrays)
+function separateWords(string) {
+    const ABC = `ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ`;
+    let words = '';
+    
+    for (const char of string) {
+        if (ABC.includes(char.toUpperCase())) {
+            words += char
+        }
 
+        // afegeix un espai si troba un espai o un apostrof i no s'ha afegit un espai al pas anterior
+        if ((char == ' ' || char == "'") && words[words.length - 1] != ' ') {
+            words += " "
+        }
+    }
+    
+    // elimina espai al principi
+    if (words[0] == ' ') words = words.slice(1)
+        
+        // elimina espai al final
+    if (words[words.length - 1] == ' ') words = words.slice(0, -1)
+        
+    return words
+}
+
+// console.log(separateWords("hola, Omar. Cómo estas?"));
+// console.log(separateWords("l'Omar és el nostre profe"));
+// console.log(separateWords(`El Carlos dijo: "¡Omar! ¡Cuidado!"`));
+// console.log(separateWords(`   El Carlos    dijo: "¡Omar!    ¡Cuidado!"    `));
+
+// console.log('');
 
 
 // TODO: crea una función que coja un string y que devuelva una palabra aleatoria contenida en ella (sin usar arrays)
 
 function randomWord(string) {
-    //string = separateWords(string)
+    string = separateWords(string)
     let spaces = 0
     
     for (const char of string) {
