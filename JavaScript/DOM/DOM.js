@@ -29,63 +29,7 @@ header.innerHTML += "<h3>Pàgina de proves modificant el DOM amb JavaScript</h3>
 
 console.log(document.querySelector("style").textContent)
 
-setTimeout(() => {
-    document.querySelector("style").textContent = `
-body {
-            background-color: rgb(250, 249, 248);
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-        }
-        main {
-            margin: auto;
-            width: 800px;
-        }
-        .bold {
-            font-weight: bold;
-        }
-        header, section, footer {
-            padding: 20px;
-        }
-        header {
-            background-color: #bf783d;
-            color: white;
-            text-align: center;
-        }
-        section {
-            border-bottom: 1px solid #ddd;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-        label, input, textarea {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        input[type="submit"] {
-            background-color: #bf783d;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-        input[type="submit"]:hover {
-            background-color: #c46f29;
-        }
-        footer{
-            text-align: center;
-        }
-        `
-}, 2000)
+
 
 setTimeout(() => {
     header.style.backgroundColor = `#b13cb9`
