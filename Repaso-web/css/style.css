@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+body {
+    /* width: 1024px; */
+    font-family: sans-serif;
+    background-color: beige;
+}
+
+/* HEADER */
+/* **************************** */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+    
+
+
+/* NAV principal */
+header nav {
+    background-color: blue;
+    /* border: 1px solid black;  */
+}
+
+.navbar-toggler {
+    border: none;
+}
+.nav-link a {
+    color: blueviolet;    
+}
+
+
+.nav-item a:hover{
+    color: blueviolet;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Main */
+aside {
+    float: left;
+    border: solid black 1px;
+
+    float: left;
+    width: 195px;
+    height: 1500px;
+       
+    background-color: #ebddca;
+    /* height: 100%; */
+      
+}
+
+article div {
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-wrap: nowrap; */
+}
+
+article div img {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
