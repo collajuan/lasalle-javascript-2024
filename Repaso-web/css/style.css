@@ -9,7 +9,7 @@
   }
 
 body {
-    /* width: 1024px; */
+    margin: auto;
     font-family: sans-serif;
     background-color: beige;
 }
@@ -22,7 +22,16 @@ header {
     background-color: bisque;
 }
 
-    
+header img {
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+}
 
 
 /* NAV principal */
@@ -61,7 +70,7 @@ aside {
 
 article div {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     /* flex-wrap: nowrap; */
 }
 
@@ -69,4 +78,9 @@ article div img {
     width: 200px;
     height: 200px;
     float: right;
+}
+
+footer {
+    border: 1px solid black;
+text-align: center;
 }
