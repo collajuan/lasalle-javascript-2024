@@ -127,4 +127,17 @@ footer {
 
 
   /* ************************************************* */
-  
+  .tarjeta img {
+    width: 100%;
+  }
+
+  .tarjeta {
+    width: 200px;
+    background-color: green;
+    display: inline-block;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+  }
