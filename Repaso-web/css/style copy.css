@@ -135,6 +135,8 @@ footer {
     width: 200px;
     background-color: green;
     display: inline-block;
+    margin: 5px;
+    padding: 5px;
   }
 
   .contenido {
